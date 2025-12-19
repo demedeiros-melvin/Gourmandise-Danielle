@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Online | Gourmandise Danielle – French Cakes</title>
+  <meta name="description" content="Place a French-style cake order with Gourmandise Danielle in West Newton. Serving Greater Boston & Boston with one-week notice and manual confirmation.">
+  <link rel="canonical" href="https://gourmandisedanielle.com/">
+  <meta property="og:title" content="Order Online | Gourmandise Danielle – French Cakes">
+  <meta property="og:description" content="Request a custom French-style cake from Gourmandise Danielle. One-week notice, manual confirmation, and premium ingredients.">
+  <meta property="og:image" content="images/og-placeholder.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Order Online | Gourmandise Danielle – French Cakes">
+  <meta name="twitter:description" content="Request a custom French-style cake from Gourmandise Danielle. One-week notice, manual confirmation, and premium ingredients.">
+  <meta name="twitter:image" content="images/og-placeholder.jpg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <div class="logo">Gourmandise Danielle</div>
+      <nav>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+        </button>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="order.html">Order Online</a>
+          <a href="about.html">About</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="policies.html">Policies</a>
+          <a href="contact.html">Contact</a>
+          <a href="blog.html">Blog</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container split">
+        <div>
+          <div class="subheading">Order Online</div>
+          <h1>French cakes, confirmed with care</h1>
+          <p>Orders require a <strong>1 week minimum notice</strong>. After you submit, you’ll receive a manual confirmation. Payment is requested only after we finalize details.</p>
+          <div class="info">
+            <p>Serving Greater Boston &amp; Boston from West Newton, MA.</p>
+            <p>Looking for something bespoke? Add notes and we will confirm feasibility.</p>
+          </div>
+        </div>
+        <div>
+          <div id="orderMessage" class="form-message" role="alert"></div>
+          <form id="orderForm" novalidate>
+            <div class="inline">
+              <div>
+                <label for="fullName">Full name</label>
+                <input id="fullName" name="fullName" type="text" placeholder="Your name" required>
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required>
+              </div>
+            </div>
+            <div class="inline">
+              <div>
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" placeholder="[CONTACT_PHONE_PLACEHOLDER]" required>
+              </div>
+              <div>
+                <label for="occasion">Occasion</label>
+                <select id="occasion" name="occasion" required>
+                  <option value="">Select an occasion</option>
+                  <option>Birthday</option>
+                  <option>Wedding</option>
+                  <option>Baby Shower</option>
+                  <option>Anniversary</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="inline">
+              <div>
+                <label for="cakeType">Cake type</label>
+                <select id="cakeType" name="cakeType" required>
+                  <option value="">Select a signature cake</option>
+                  <option>[SIGNATURE_CAKE_NAME_1]</option>
+                  <option>[SIGNATURE_CAKE_NAME_2]</option>
+                  <option>[SIGNATURE_CAKE_NAME_3]</option>
+                  <option>[SIGNATURE_CAKE_NAME_4]</option>
+                  <option>Custom request</option>
+                </select>
+              </div>
+              <div>
+                <label for="size">Size</label>
+                <select id="size" name="size" required>
+                  <option value="">Choose a size</option>
+                  <option>6"</option>
+                  <option>8"</option>
+                  <option>10"</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="inline">
+              <div>
+                <label for="flavor">Flavor</label>
+                <input id="flavor" name="flavor" type="text" placeholder="[FLAVOR_OPTIONS_PLACEHOLDER]">
+              </div>
+              <div>
+                <label for="filling">Filling</label>
+                <input id="filling" name="filling" type="text" placeholder="[FILLING_OPTIONS_PLACEHOLDER]">
+              </div>
+            </div>
+            <div>
+              <label for="decoration">Decoration notes</label>
+              <textarea id="decoration" name="decoration" placeholder="Palette, piping style, inscriptions, inspiration links"></textarea>
+            </div>
+            <div>
+              <label>Dietary needs</label>
+              <div class="checkbox-group">
+                <label><input type="checkbox" name="dietary" value="gluten-free"> Gluten-friendly</label>
+                <label><input type="checkbox" name="dietary" value="nut-free"> Nut-free</label>
+                <label><input type="checkbox" name="dietary" value="other"> Other</label>
+              </div>
+              <textarea name="dietaryNotes" placeholder="List allergies or sensitivities"></textarea>
+            </div>
+            <div class="inline">
+              <div>
+                <label for="date">Desired pickup/delivery date</label>
+                <input id="date" name="date" type="date" required>
+              </div>
+              <div>
+                <label for="time">Preferred time</label>
+                <input id="time" name="time" type="time" required>
+              </div>
+            </div>
+            <div>
+              <label>Pickup vs Delivery</label>
+              <div class="radio-group">
+                <label><input type="radio" name="fulfillment" value="pickup" checked> Pickup in West Newton</label>
+                <label><input type="radio" name="fulfillment" value="delivery"> Delivery (radius: [DELIVERY_RADIUS_PLACEHOLDER])</label>
+              </div>
+            </div>
+            <fieldset id="deliveryFields" class="inline" style="border:none; padding:0; margin:0;">
+              <div>
+                <label for="address">Delivery address</label>
+                <input id="address" name="address" type="text" placeholder="Street, city, zip">
+              </div>
+              <div>
+                <label for="instructions">Delivery notes</label>
+                <input id="instructions" name="instructions" type="text" placeholder="Access notes, buzzer, etc.">
+              </div>
+            </fieldset>
+            <div class="inline">
+              <div>
+                <label for="budget">Estimated budget</label>
+                <input id="budget" name="budget" type="number" min="0" step="25" placeholder="USD">
+              </div>
+              <div class="info">
+                Delivery may include a fee ([DELIVERY_FEE_PLACEHOLDER]) based on distance and schedule.
+              </div>
+            </div>
+            <button class="btn" type="submit">Submit order request</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container card">
+        <div class="subheading">Payment</div>
+        <h2>Payment after confirmation</h2>
+        <p>Once your order is reviewed and confirmed, you will receive a payment link via [PAYMENT_METHOD_PLACEHOLDER] (e.g. Stripe, Square, or other).</p>
+        <!-- TODO: Integrate payment provider (e.g., Stripe Checkout) once backend is connected. -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">Gourmandise Danielle</div>
+        <p>French-style cakes in Greater Boston.</p>
+        <p>West Newton, MA – Serving Greater Boston &amp; Boston</p>
+      </div>
+      <div>
+        <div class="footer-meta">
+          <span class="pill">Instagram</span>
+          <a href="[INSTAGRAM_LINK_PLACEHOLDER]">[INSTAGRAM_LINK_PLACEHOLDER]</a>
+        </div>
+        <p>Email: <a href="mailto:[CONTACT_EMAIL_PLACEHOLDER]">[CONTACT_EMAIL_PLACEHOLDER]</a></p>
+        <p>Phone: <a href="tel:[CONTACT_PHONE_PLACEHOLDER]">[CONTACT_PHONE_PLACEHOLDER]</a></p>
+      </div>
+    </div>
+    <div class="container copyright">
+      © <span id="year"></span> Gourmandise Danielle – French-style cakes in Greater Boston.
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
